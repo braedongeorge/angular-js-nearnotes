@@ -1,0 +1,110 @@
+body {
+  padding-top: 70px;
+  padding-bottom: 30px;
+  	background-color: #dbdb99;
+ 
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: #FFFFFF;
+}
+
+.navbar-inverse .navbar-brand {
+	color: #FFFFFF;
+}
+
+
+.container .jumbotron  {
+	 background-color: #FFFFB2
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+  width: auto;
+}
+
+.btn-primary {
+	margin-top: 20px;
+
+}
+
+
+
+
+.jumbotron p {
+	font-size: 14px;
+	padding: 0px;
+}
+
+
+.navbar-inverse .navbar-nav>.active>a {
+	background-color:transparent;
+	background-image:none;
+
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+-webkit-box-shadow: inset 0 3px 9px rgba(0,0,0,.25);
+box-shadow: inset 0 3px 9px rgba(0,0,0,.25);
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+  background-color: transparent;
+}
+
+.navbar-inverse .navbar-nav>.active>a:hover {
+	background-color:transparent;
+	background-image:none;
+
+}
+
+.navbar-inverse .navbar-nav>.open>a:focus {
+		background-color:transparent;
+	background-image:none;
+
+}
+
+.navbar-inverse .navbar-toggle {
+	border-color: #FFF;
+}
+
+
+@media (max-width: 767px) {
+	.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+		color: #FFF;
+	}
+	
+.dropdown-header {
+	color: #FFF;
+}
+
+
+.dropdown-menu>li>a {
+	color: #FFF;
+}
+}
+
+
+
+
+
+.navbar-inverse {
+  background-color: transparent;
+  border-style: none;
+  background-image: -moz-linear-gradient(top, #a88a63, #704309);
+  background-image: -ms-linear-gradient(top, #a88a63, #704309);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#a88a63), to(#704309));
+  background-image: -webkit-linear-gradient(top, #a88a63, #704309);
+  background-image: -o-linear-gradient(top, #a88a63, #704309);
+  background-image: linear-gradient(top, #a88a63, #704309);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#'a88a63, endColorstr='#'704309, GradientType=0);
+}

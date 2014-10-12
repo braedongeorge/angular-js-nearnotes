@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html ng-app="nearNotes">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link  rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link href="css/theme.css" rel="stylesheet">
+
+	<title>NearNotes</title>
+</head>
+
+<body role="document">
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><img src="img/nearnotes-logo.png" style="margin-top: -6px; margin-right: 6px;">NearNotes</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="https://play.google.com/store/apps/details?id=com.nearnotes&hl=en" target="_blank">Download</a></li>
+					<li><a href="mailto:contact@nearnotes.com">Contact</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div>
+
+	<div class="container theme-showcase" role="main" ng-controller="NotesController">
+		<div class="jumbotron">
+			<form role="form" ng-repeat="task in tasks" class="form-horizontal">
+				<div class="form-group">
+					<label for="notesTitle">Title</label>
+					<p class="form-control-static" id="notesTitle">{{task.get('title')}}</p>
+				</div>
+				<div class="form-group">
+					<label for="notesLocation">Location</label>
+					<p class="form-control-static" id="notesLocation">{{task.get('location')}}</p>
+				</div>
+				<div class="form-group">
+					<label for="notesBody">Body</label>
+					<textarea class="form-control" id="notesBody" rows="6" placeholder="Loading body..." ng-model="bodyText"></textarea>
+				</div>
+				<div class="form-group">
+				<button type="submit" class="btn btn-default" ng-click="task.set('body', bodyText)">Update Note</button>
+				</div>
+			</form>
+
+
+			
+			
+
+		</div>
+
+		
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://www.dropbox.com/static/api/dropbox-datastores-1.2-latest.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/angular-local-storage.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="js/dropstore-ng.js"></script>
+	<script src="js/local.js"></script>
+	<script src="js/app.js"></script>
+
+</body>
+</html>
